@@ -25,6 +25,14 @@
       <h1>Hello world!</h1>
     {{/view}}
   </script>
+  
+  <script type="text/x-handlebars">
+  <ul class="tweets">
+  {{#each Twitter.searchResults}}
+    <li class="tweet">{{text}}</li>
+  {{/each}}
+  </ul>
+</script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
